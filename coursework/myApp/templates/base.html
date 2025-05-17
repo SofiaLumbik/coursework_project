@@ -34,17 +34,28 @@
             padding-left: 1rem;
             padding-right: 1rem;
         }
+        .nav-link.dropdown-toggle.active {
+          pointer-events: auto;  /* чтобы клик работал */
+          color: #0000FF !important; /* синий цвет активного пункта */
+          background-color: rgba(0, 0, 255, 0.1);
+        }
 
         .dropdown-toggle::after {
             display: none !important;
         }
 
+        .dropdown-arrow {
+          margin-left: 0.4em;
+          font-size: 0.75em;
+          transition: transform 0.2s ease;
+        }
 
         .dropdown-arrow {
-          margin-left: 0.3em;
-          font-size: 0.8em;
-          vertical-align: middle;
+          margin-left: 0.4em;
+          font-size: 0.75em;
+          transition: transform 0.2s ease;
         }
+
         .navbar-dark .nav-link:hover {
             color: #0000FF !important;  /* синий цвет при наведении */
             background-color: rgba(0, 0, 255, 0.1);  /* светло-синий фон */
@@ -58,8 +69,7 @@
             border-radius: 8px;
             transition: background-color 0.2s ease;
         }
-
-
+}
     </style>
 
 </head>
@@ -79,8 +89,13 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle {% if request.resolver_match.url_name == 'about' %} active{% endif %}" id="aboutDropdown" href="#" role="button" aria-expanded="false" data-bs-display="static">
-              О нас
+          <a class="nav-link dropdown-toggle {% if request.resolver_match.url_name == 'about' %}active{% endif %}"
+             id="aboutDropdown"
+             href="#"
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">
+            О нас <span class="dropdown-arrow">▾</span>
           </a>
           <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
             <li><a class="dropdown-item" href="{% url 'about' %}#history">История</a></li>
@@ -90,7 +105,8 @@
             <li><a class="dropdown-item" href="{% url 'contacts' %}">Контакты</a></li>
           </ul>
         </li>
-        <li class="nav-item">
+
+        <li class="nav-item ">
             <a class="nav-link {% if '/catalog' in request.path %}active{% endif %}" href="{% url 'catalog' %}">Каталог</a>
         </li>
 

@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+
+<!-- Бегущая строка -->
+<div class="marquee-container">
+  <div class="marquee">
+    <span>SUVE.PRO СУВЕНИРНАЯ ПРОДУКЦИЯ • SUVE.PRO СУВЕНИРНАЯ ПРОДУКЦИЯ • SUVE.PRO СУВЕНИРНАЯ ПРОДУКЦИЯ • </span>
+    <span>SUVE.PRO СУВЕНИРНАЯ ПРОДУКЦИЯ • SUVE.PRO СУВЕНИРНАЯ ПРОДУКЦИЯ • SUVE.PRO СУВЕНИРНАЯ ПРОДУКЦИЯ • </span>
+  </div>
+</div>
+
+<section class="hero bg-white pt-3 pb-4">
+  <div class="container">
+
+    <div class="row align-items-center position-relative" style="min-height: 400px;">
+
+      <div class="col-md-6 position-relative d-flex justify-content-start" style="overflow: visible;">
+      <img src="{% static 'главная.jpg' %}"
+           alt="Пример продукции"
+           class="img-fluid"
+           style="
+             width: 115%;         /* Увеличиваем ширину */
+             max-width: none;
+             transform: translateX(0%); /* Сдвигаем вправо */
+             border-radius: 30px;
+             transition: 2.0s ease;">
+    </div>
+
+
+      <!-- Правая часть: текст с фоном, слегка заходящий на картинку -->
+      <div class="col-md-6" style="margin-left: -40px; z-index: 2;">
+        <div style="background: #e0f0ff; border-radius: 50px; padding: 30px;">
+          <h1 class="fw-bold text-black text-start m-0" style="font-size: 2rem;">
+            Брендирование сувениров и нанесение лого
+          </h1>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Кнопка на всю ширину ниже секции -->
+    <div class="row mt-5">
+      <div class="col-12">
+        <a href="{% url 'contacts' %}"
+           class="btn btn-primary btn-lg fw-bold text-white w-100 mt-1"
+           style="background-color: #0000FF; border: none; height: 70px; padding: 20px 24px;">
+          Заказать сувениры
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="social-section py-5 bg-white">
+  <div class="container text-center" data-aos="fade-up">
+    <h2 class="mb-4">Мы в соцсетях</h2>
+    <div class="social-icons d-flex gap-3 justify-content-center mt-0">
+      <a href="#" class="social-icon">
+        <img src="{% static 'vk.png' %}" alt="VK">
+      </a>
+      <a href="#" class="social-icon">
+        <img src="{% static 'telegram1.png' %}" alt="Telegram">
+      </a>
+      <a href="#" class="social-icon">
+        <img src="{% static 'whatsapp1.png' %}" alt="WhatsApp">
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="about-company py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6" data-aos="fade-up">
+        <h3 class="fw-bold mb-3">О компании SUVE.PRO</h3>
+        <p class="mb-3">
+          SUVE.PRO — это команда профессионалов в сфере брендирования и изготовления сувенирной продукции. Мы объединяем креатив, технический опыт и внимание к деталям, чтобы реализовать любые идеи клиента — от уникальных подарков до комплексных корпоративных решений.
+        </p>
+        <p>
+          Наша компания работает с 2006 года и заслужила доверие крупных брендов благодаря высокому качеству, соблюдению сроков и индивидуальному подходу. SUVE.PRO — ваш надёжный партнёр в продвижении бизнеса через эффектные и полезные сувениры.
+        </p>
+      </div>
+      <div class="col-md-6" data-aos="fade-left">
+        <img src="{% static 'about_us.jpg' %}" alt="О нас" class="img-fluid rounded">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Иконки Bootstrap -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+{% endblock %}

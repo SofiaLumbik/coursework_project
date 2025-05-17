@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Сувенирная продукция для FIFA World Cup 2018</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container py-5">
+        <a href="{% url 'portfolio' %}" class="back-button">
+              ← Назад
+        </a>
+        <h1 class="accent mb-4 text-center">Сувенирная продукция для FIFA World Cup 2018</h1>
+
+        <div class="text-center mb-5">
+            <img src="{% static 'img/fifa.jpg' %}" alt="FIFA 2018" class="top-image">
+        </div>
+
+        <div class="info-section">
+            <div class="content-block">
+                <p><strong>Июнь 2018 г.</strong></p>
+                <p><strong>Клиент:</strong> FIFA World Cup 2018</p>
+                <p>FIFA World Cup 2018 — Чемпионат мира по футболу 2018 года, финальная часть которого прошла в России. Казань стала одним из городов, принимавших чемпионат.</p>
+            </div>
+
+            <div class="content-block">
+                <p><strong>Задача:</strong></p>
+                <p>Обеспечить волонтеров чемпионата брендированной, удобной и качественной одеждой, подходящей для разных погодных условий и отражающей стиль FIFA World Cup 2018.</p>
+            </div>
+
+            <div class="content-block">
+                <p><strong>Идея:</strong></p>
+                <p>Создать международную по качеству экипировку и аксессуары: удобную, практичную и яркую. Особое внимание — головным уборам и рюкзакам, как ключевым элементам для волонтеров.</p>
+            </div>
+
+            <div class="content-block">
+                <p><strong>Реализация:</strong></p>
+                <p>Было изготовлено более 10 000 единиц продукции в стиле «FIFA World Cup 2018 Host City» с нанесением фирменного логотипа:</p>
+                <ul>
+                    <li>ветровки;</li>
+                    <li>футболки;</li>
+                    <li>кепки;</li>
+                    <li>кроссовки;</li>
+                    <li>штаны-шорты (универсальные для жары и прохлады).</li>
+                </ul>
+                <p>Каждая единица продумывалась как по дизайну, так и по функционалу. Изготовлены не просто яркие, а полезные аксессуары — кепки, сумки, рюкзаки.</p>
+            </div>
+
+            <div class="row align-items-center content-block">
+                <div class="col-md-8">
+                    <p><strong>Результат:</strong></p>
+                    <p>Компания SUVE.PRO  стала частью грандиозного события — Чемпионата мира по футболу 2018 года. Мы подготовили современную, удобную и качественную экипировку для волонтёров, помогая успешно провести международное мероприятие.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="{% static 'img/fifa2.jpg' %}" alt="Сувениры FIFA" class="content-img">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Сувенирная продукция – Россия спортивная держава 2021</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container py-5">
+        <a href="{% url 'portfolio' %}" class="back-button">
+              ← Назад
+        </a>
+        <h1 class="accent mb-4 text-center">Сувенирная продукция для форума «РОССИЯ – СПОРТИВНАЯ ДЕРЖАВА 2021»</h1>
+
+        <div class="text-center mb-5">
+            <img src="{% static 'img/спорт-держава.jpg' %}" alt="Россия — спортивная держава" class="top-image">
+        </div>
+
+        <div class="info-section">
+            <div class="content-block">
+                <p><strong>Июль 2021 г.</strong></p>
+                <p><strong>Клиент:</strong> Международный форум «Россия – спортивная держава»</p>
+                <p>Это авторитетная площадка, объединяющая лидеров спортивного движения из России и других стран. Организатор – Министерство спорта РФ.</p>
+            </div>
+
+            <div class="content-block">
+                <p><strong>Задача:</strong></p>
+                <p>Полностью обеспечить форум сувенирной продукцией и подготовить памятные, полезные подарки для 2 500 участников мероприятия.</p>
+            </div>
+
+            <div class="content-block">
+                <p><strong>Идея:</strong></p>
+                <p>Форум объединил спортсменов, чиновников, предпринимателей и экспертов. Поэтому вместо узкопрофильных спортивных сувениров мы предложили универсальные и практичные подарки, подходящие всем гостям форума.</p>
+            </div>
+
+            <div class="content-block">
+                <p><strong>Реализация:</strong></p>
+                <p>Мы оформили макеты в фирменной стилистике форума и нанесли декоры и логотипы более чем на 20 000 изделий:</p>
+                <ul>
+                    <li>универсальные рюкзаки синего цвета;</li>
+                    <li>USB-зарядные устройства (powerbank);</li>
+                    <li>органайзеры, блокноты и ручки с фирменной символикой;</li>
+                    <li>полотенца с логотипом ГТО;</li>
+                    <li>наборы эспандеров в брендированных мешочках;</li>
+                    <li>защитные маски и санитайзеры;</li>
+                    <li>подарочные наборы с чак-чаком, чаем и этнической символикой.</li>
+                </ul>
+                <p>Всё было подготовлено и доставлено организаторам форума точно в срок.</p>
+            </div>
+
+            <div class="row align-items-center content-block">
+                <div class="col-md-8">
+                    <p><strong>Результат:</strong></p>
+                    <p>Форум стал первым крупным офлайн-мероприятием после карантина. Мы гордимся тем, что обеспечили его продукцией, создали тёплую атмосферу и помогли участникам сохранить памятные и полезные подарки о важном событии.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="{% static 'img/спорт-держава4.jpg' %}" alt="Сувениры РСД 2021" class="content-img">
+                </div>
+            </div>
+            <!-- Блок с 4 дополнительными фотографиями -->
+            <div class="row g-4 mt-5">
+                <div class="col-md-6">
+                    <img src="{% static 'img/спорт-держава2.jpg' %}" alt="Фото 1" class="img-fluid rounded shadow-sm">
+                </div>
+                <div class="col-md-6">
+                    <img src="{% static 'img/спорт-держава3.jpg' %}" alt="Фото 2" class="img-fluid rounded shadow-sm">
+                </div>
+                <div class="col-md-6">
+                    <img src="{% static 'img/спорт-держава5.jpg' %}" alt="Фото 3" class="img-fluid rounded shadow-sm">
+                </div>
+                <div class="col-md-6">
+                    <img src="{% static 'img/спорт-держава6.jpg' %}" alt="Фото 4" class="img-fluid rounded shadow-sm">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
+
+{% endblock %}

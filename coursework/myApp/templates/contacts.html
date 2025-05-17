@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+<section class="container my-5 mt-1 mb-1">
+  <h2 class="contacts-title text-center fw-bold fade-up">Контакты</h2>
+  <div class="row justify-content-center align-items-start">
+    <!-- Левая колонка с контактами -->
+    <div class="col-lg-5 mb-4 p-4" style="background-color: #fffbe6; border-radius: 12px;">
+      <div class="mb-4 d-flex">
+        <div class="bg-primary rounded-circle me-3" style="width:16px; height:16px;"></div>
+        <div>
+          <h5 class="fw-bold mb-1">Адрес</h5>
+          <p class="mb-0">Москва, Холодильный пер., 3к1с3,<br>под. 6, офис 404</p>
+        </div>
+      </div>
+      <div class="mb-4 d-flex">
+        <div class="bg-primary rounded-circle me-3" style="width:16px; height:16px;"></div>
+        <div>
+          <h5 class="fw-bold mb-1">Телефон</h5>
+          <p class="mb-0">+7 (495) 021-35-77</p>
+        </div>
+      </div>
+      <div class="mb-4 d-flex">
+        <div class="bg-primary rounded-circle me-3" style="width:16px; height:16px;"></div>
+        <div>
+          <h5 class="fw-bold mb-1">E-mail</h5>
+          <p class="mb-0">zakaz@suve.pro</p>
+        </div>
+      </div>
+      <div class="mb-2 d-flex">
+        <div class="bg-primary rounded-circle me-3" style="width:16px; height:16px;"></div>
+        <div>
+          <h5 class="fw-bold mb-1">Режим работы</h5>
+          <p class="mb-0">Пн–Пт: с 9:00 до 18:00<br>Сб–Вс: выходной</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Правая колонка с картой -->
+    <div class="col-lg-7">
+      <div style="position:relative;overflow:hidden;width:100%;height:400px;">
+        <iframe src="https://yandex.ru/map-widget/v1/?from=mapframe&ll=37.627436%2C55.709176&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjkxMDUyMRJf0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINCl0L7Qu9C-0LTQuNC70YzQvdGL0Lkg0L_QtdGA0LXRg9C70L7QuiwgM9C6MdGBMTMsINC_0L7QtNGK0LXQt9C0IDYiCg2kgxZCFQzWXkIwr7Xr1w8%2C&source=mapframe&um=constructor%3A2431a67c0d3a3fc2322db4aa6f8fbc6dbd987dcdb7bce28b50a7985f7ed754b4&utm_source=mapframe&z=19"
+                width="100%" height="100%" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div id="contact-form" class="p-5" style="background-color: #eaf6ff; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+        <h3 class="fw-bold mb-4 text-center">Связаться с нами</h3>
+        <form method="post">
+          {% csrf_token %}
+          <div class="mb-3">
+            {{ form.name.label_tag }}
+            {{ form.name|add_class:"form-control" }}
+          </div>
+          <div class="mb-3">
+            {{ form.email.label_tag }}
+            {{ form.email|add_class:"form-control" }}
+          </div>
+          <div class="mb-3">
+            {{ form.phone.label_tag }}
+            {{ form.phone|add_class:"form-control" }}
+          </div>
+          <div class="mb-3">
+            {{ form.message.label_tag }}
+            {{ form.message|add_class:"form-control" }}
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary px-5 py-2 rounded-pill">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

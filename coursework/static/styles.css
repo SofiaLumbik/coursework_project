@@ -1,0 +1,684 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+
+/* Основной контент — тянется, чтобы футер был внизу */
+main {
+    flex: 1;
+}
+
+/* Навигация */
+.navbar {
+    background-color: #0000FF;
+    height: 90px;
+    padding-top: 0;
+    padding-bottom: 0;
+    position: relative;
+    z-index: 1060;
+}
+
+/* Название бренда */
+.navbar-brand span {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: white;
+}
+
+
+
+/* Увеличенные пункты меню */
+.nav-item {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+
+/* В мобильной версии (бургер меню) — чёрная стрелка */
+@media (max-width: 991.98px) {
+    .dropdown-toggle::after {
+        border-top-color: #000;  /* чёрная стрелка */
+    }
+}
+
+
+/* Цвет текста ссылок */
+.nav-link {
+    color: #ffffff !important;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Цвет при наведении */
+.nav-link:hover {
+    color: #0000FF !important;
+}
+
+/* Активный пункт меню */
+.nav-link.active {
+    color: #0000FF !important;
+    font-weight: bold;
+}
+
+/* Подчёркивание у активного пункта */
+.nav-link.active::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #0000FF;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* Контейнер */
+.container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Заголовки */
+h1, h2 {
+    font-weight: 800;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.back-button {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    color: #0000FF;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-left: 3px solid #0000FF;
+    padding-left: 10px;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: white;
+        position: absolute;
+        top: 90px; /* подстрой под свою высоту навбара */
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        z-index: 1050;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 0 0 12px 12px;
+    }
+
+    .navbar-collapse .nav-link {
+        color: #000000 !important;
+    }
+
+    .navbar-collapse .nav-link.active {
+        color: #0000FF !important;
+    }
+}
+
+
+
+/*О НАС*/
+/* Основной шрифт и цветовая палитра */
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #1a1a1a;
+  background-color: #fff;
+  line-height: 1.7;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+
+/* Заголовки */
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000;
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+h2::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background-color: #0000FF;
+  display: block;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* Подсветка исторических годов */
+.highlight-yellow p strong {
+  color: #0000FF;
+}
+
+/* Блок истории */
+#history p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+/* Преимущества */
+#advantages {
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-left: 5px solid #0000FF;
+  border-radius: 8px;
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+#advantages ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#advantages ul li {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.8rem;
+  font-size: 1.05rem;
+}
+
+#advantages ul li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #0000FF;
+}
+
+/* Отзывы (карточки) */
+#reviews .card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 16px;
+}
+
+#reviews .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+#reviews .card-text {
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+#reviews .card-title {
+  font-weight: 600;
+  color: #0000FF;
+}
+
+/* Анимации */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Стрелки карусели */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #0000FF;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-size: 60% 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color: #0000cc;
+}
+
+
+/*КАТАЛОГ*/
+body {
+      background-color: #f8f9fa;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    .section-block {
+      background-color: #e6f2ff;
+      border-radius: 1rem;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .section-block:hover {
+      transform: translateY(-5px);
+    }
+    .highlight-yellow {
+      background-color: #fff9e6;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+
+/* Карточки категорий и продуктов */
+.card {
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.1);
+    border-radius: 16px;
+    transition: transform 0.2s ease;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Изображение */
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+/* Контейнер для текста */
+.card-body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* Название товара */
+.card-title,
+.product-name {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Цена */
+.product-price {
+    font-weight: 600;
+    color: #0000FF;
+    margin-bottom: 0.5rem;
+}
+
+/* Описание */
+.card-text,
+.product-description {
+    flex-grow: 1;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    color: #333333;
+}
+
+/* Кнопка Заказать (всегда видна, с анимацией) */
+.btn-order {
+    background-color: #0000FF;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 0.6rem 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    margin-top: auto;
+    opacity: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+}
+
+/* Эффект при наведении */
+.btn-order:hover {
+    background-color: #0033cc; /* чуть темнее */
+    transform: translateY(-2px); /* немного приподнимается */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* усиленная тень */
+}
+
+/*ГЛАВНАЯ*/
+.social-icons {
+  margin-top: 40px;
+}
+
+.social-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #f1f1f1; /* или прозрачный фон */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.social-icon img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+
+/* При наведении можно добавить эффект */
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+
+
+/*Бегущая строка*/
+.marquee-container {
+  background-color: white;
+  overflow: hidden;
+  position: relative;
+  z-index: 999;
+  border-bottom: 2px solid #0000FF;
+  height: 50px; /* уменьшаем высоту контейнера */
+  display: flex;
+  align-items: center; /* выравнивание по вертикали */
+}
+
+.marquee {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee-scroll 15s linear infinite;
+}
+
+.marquee span {
+  display: inline-block;
+  color: #0000FF;
+  font-weight: 700; /* делаем текст жирнее */
+  font-size: 2.5rem; /* УВЕЛИЧИВАЕМ шрифт */
+  padding: 0 2rem; /* убираем вертикальные отступы, оставляя только горизонтальные */
+  line-height: 1.5; /* плотнее текст */
+}
+
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+
+/*ПОРТФОЛИО*/
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-title {
+  font-size: 2rem; /* или 1.75rem */
+  margin-bottom: 1.5rem;
+}
+
+.project-img:hover + .overlay,
+    .overlay:hover {
+    opacity: 1;
+}
+
+.text-overlay {
+    color: #0000FF;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+/*ПРОЕКТЫ*/
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Arial', sans-serif;
+}
+
+h1, h2 {
+    font-weight: 700;
+}
+
+.accent {
+    color: #0000FF;
+}
+
+.top-image {
+    width: 75%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 16px;
+}
+
+.content-img {
+    width: 100%;
+    border-radius: 16px;
+}
+
+.info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.content-block {
+    background-color: #f0f8ff; /* бледно-голубой */
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.content-block ul {
+    padding-left: 1.2rem;
+}
+
+.content-block li {
+    margin-bottom: 0.5rem;
+}
+
+/*КАТАЛОГ*/
+.catalog-title {
+  font-size: 2rem; /* или 1.75rem */
+  margin-bottom: 1.5rem;
+}
+
+/*ПРОИЗВОДСТВО*/
+.production-title {
+  font-size: 2rem; /* или 1.75rem */
+  margin-bottom: 1.5rem;
+}
+
+/*КОНТАКТЫ*/
+.contacts-title {
+  font-size: 2rem; /* или 1.75rem */
+  margin-bottom: 1.5rem;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ОПЛАТА И ДОСТАВКА */
+/* Общий стиль */
+
+/* Заголовок */
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #0000FF;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.payment_delivery-title {
+  font-size: 2rem; /* или 1.75rem */
+  margin-bottom: 1.5rem;
+}
+
+/* Общий контейнер блока */
+.section {
+  background: #f8f8f8;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  animation: fadeInUp 1s ease-out;
+  transition: transform 0.3s ease;
+}
+
+.section:hover {
+  transform: translateY(-4px);
+}
+
+/* Заголовок блока */
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0000FF;
+  margin-bottom: 1.2rem;
+  border-left: 4px solid #0000FF;
+  padding-left: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Контент блока */
+.section-content p,
+.section-content li {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+}
+
+.section-content a {
+  color: #0000FF;
+  text-decoration: none;
+  border-bottom: 1px dashed #0000FF;
+  transition: all 0.3s ease-in-out;
+}
+
+.section-content a:hover {
+  color: #000;
+  border-color: #000;
+}
+
+/* Список */
+.section-content ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Анимации */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  .section-title {
+    font-size: 1.3rem;
+  }
+  .section {
+    padding: 1.5rem;
+  }
+}
+
+
+
+
+/* Футер */
+footer {
+    background-color: #0000FF;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+

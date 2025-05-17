@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container my-5 mt-1 mb-1">
+  <h2 class="portfolio-title text-center fw-bold fade-up">Портфолио</h2>
+  <div class="row g-4">
+    <!-- Карточка проекта -->
+    <div class="col-md-6 col-lg-4">
+      <div class="position-relative overflow-hidden rounded-4 shadow-sm">
+        <a href="/portfolio/umschool/">
+          <img src="/static/img/умскул.jpg" class="img-fluid w-100 project-img" alt="Умскул">
+          <div class="overlay d-flex align-items-center justify-content-center">
+            <span class="text-overlay">Смотреть проект</span>
+          </div>
+        </a>
+      </div>
+      <h5 class="text-center mt-2">Сувенирная продукция для онлайн-школы "Умскул"</h5>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+      <div class="position-relative overflow-hidden rounded-4 shadow-sm">
+        <a href="/portfolio/digitalskills/">
+          <img src="/static/img/digitalskills.jpg" class="img-fluid w-100 project-img" alt="DigitalSkills">
+          <div class="overlay d-flex align-items-center justify-content-center">
+            <span class="text-overlay">Смотреть проект</span>
+          </div>
+        </a>
+      </div>
+      <h5 class="text-center mt-2">Сувенирная и промо-продукция для DigitalSkills 2022</h5>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+      <div class="position-relative overflow-hidden rounded-4 shadow-sm">
+        <a href="/portfolio/fifa/">
+          <img src="/static/img/fifa.jpg" class="img-fluid w-100 project-img" alt="FIFA 2018">
+          <div class="overlay d-flex align-items-center justify-content-center">
+            <span class="text-overlay">Смотреть проект</span>
+          </div>
+        </a>
+      </div>
+      <h5 class="text-center mt-2">Сувенирная продукция для "FIFA World Cup 2018"</h5>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+      <div class="position-relative overflow-hidden rounded-4 shadow-sm">
+        <a href="/portfolio/sport/">
+          <img src="/static/img/спорт-держава.jpg" class="img-fluid w-100 project-img" alt="Россия - спортивная держава">
+          <div class="overlay d-flex align-items-center justify-content-center">
+            <span class="text-overlay">Смотреть проект</span>
+          </div>
+        </a>
+      </div>
+      <h5 class="text-center mt-2">Сувенирная продукция для форума «РОССИЯ - СПОРТИВНАЯ ДЕРЖАВА 2021»</h5>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+      <div class="position-relative overflow-hidden rounded-4 shadow-sm">
+        <a href="/portfolio/tatmedia/">
+          <img src="/static/img/татмедиа.jpg" class="img-fluid w-100 project-img" alt="Татмедиа">
+          <div class="overlay d-flex align-items-center justify-content-center">
+            <span class="text-overlay">Смотреть проект</span>
+          </div>
+        </a>
+      </div>
+      <h5 class="text-center mt-2">Сувенирная продукция для «ТАТМЕДИА»</h5>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+      <div class="position-relative overflow-hidden rounded-4 shadow-sm">
+        <a href="/portfolio/volunteer/">
+          <img src="/static/img/volunteer.jpg" class="img-fluid w-100 project-img" alt="FISU 2019">
+          <div class="overlay d-flex align-items-center justify-content-center">
+            <span class="text-overlay">Смотреть проект</span>
+          </div>
+        </a>
+      </div>
+      <h5 class="text-center mt-2">Разработка и производство продукции для «FISU VOLUNTEER LEADERS ACADEMY 2019»</h5>
+    </div>
+  </div>
+</div>
+{% endblock %}

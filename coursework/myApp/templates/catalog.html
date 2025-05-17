@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="container my-5 mt-1 mb-1">
+  <h2 class="catalog-title text-center fw-bold fade-up">Каталог</h2>
+  <div class="row">
+    {% for category in categories %}
+    <div class="col-md-4 mb-4">
+      <div class="card category-card h-100">
+        {% if category.image %}
+          <img src="{{ category.image.url }}" class="card-img-top category-img" alt="{{ category.name }}">
+        {% endif %}
+        <div class="card-body text-center">
+          <h5 class="category-name">{{ category.name }}</h5>
+          <a href="{% url 'category_products' category.slug %}" class="btn btn-primary mt-2">Перейти</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
+
+
+

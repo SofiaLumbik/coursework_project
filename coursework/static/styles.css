@@ -102,7 +102,7 @@ h1, h2 {
     .navbar-collapse {
         background-color: white;
         position: absolute;
-        top: 90px; /* подстрой под свою высоту навбара */
+        top: 90px;
         left: 0;
         width: 100%;
         padding: 1rem;
@@ -123,7 +123,6 @@ h1, h2 {
 
 
 /*О НАС*/
-/* Основной шрифт и цветовая палитра */
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #1a1a1a;
@@ -377,9 +376,9 @@ body {
 
 /* Эффект при наведении */
 .btn-order:hover {
-    background-color: #0033cc; /* чуть темнее */
-    transform: translateY(-2px); /* немного приподнимается */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* усиленная тень */
+    background-color: #0033cc;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /*ГЛАВНАЯ*/
@@ -391,7 +390,7 @@ body {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-color: #f1f1f1; /* или прозрачный фон */
+  background-color: #f1f1f1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -419,9 +418,9 @@ body {
   position: relative;
   z-index: 999;
   border-bottom: 2px solid #0000FF;
-  height: 50px; /* уменьшаем высоту контейнера */
+  height: 50px;
   display: flex;
-  align-items: center; /* выравнивание по вертикали */
+  align-items: center;
 }
 
 .marquee {
@@ -433,10 +432,10 @@ body {
 .marquee span {
   display: inline-block;
   color: #0000FF;
-  font-weight: 700; /* делаем текст жирнее */
-  font-size: 2.5rem; /* УВЕЛИЧИВАЕМ шрифт */
-  padding: 0 2rem; /* убираем вертикальные отступы, оставляя только горизонтальные */
-  line-height: 1.5; /* плотнее текст */
+  font-weight: 700;
+  font-size: 2.5rem;
+  padding: 0 2rem;
+  line-height: 1.5;
 }
 
 @keyframes marquee-scroll {
@@ -484,7 +483,7 @@ body {
   transform: translateX(0%);
   border-radius: 30px;
   transition: 2s ease;
-  display: block;  /* Чтобы убрать возможные пробелы снизу */
+  display: block;
   margin: 0 auto;
   max-width: 100%;
   height: auto;
@@ -558,7 +557,7 @@ h1, h2 {
 }
 
 .content-block {
-    background-color: #f0f8ff; /* бледно-голубой */
+    background-color: #f0f8ff;
     padding: 1.5rem;
     border-radius: 16px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
@@ -605,9 +604,6 @@ h1, h2 {
 }
 
 /* ОПЛАТА И ДОСТАВКА */
-/* Общий стиль */
-
-/* Заголовок */
 h1 {
   font-size: 3rem;
   font-weight: 800;
@@ -711,8 +707,6 @@ h1 {
     padding: 1.5rem;
   }
 }
-
-
 
 
 /* Футер */

@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Product, Category
 from .forms import ContactForm
+from django.contrib import messages
+
 
 def home(request):
     return render(request, 'home.html')
@@ -42,7 +44,8 @@ def contacts(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('thanks')
+            messages.success(request, 'Ваше обращение успешно отправлено!')
+            return redirect('contacts')
     else:
         form = ContactForm()
     return render(request, 'contacts.html', {'form': form})
